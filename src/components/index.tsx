@@ -8,8 +8,6 @@ type Card = {
 };
 
 const Card: React.FC<Card> = (props) => {
-  console.log(33333);
-
   return (
     <TouchableOpacity
       style={{ backgroundColor: 'red', margin: 10, padding: 30 }}

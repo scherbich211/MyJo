@@ -21,8 +21,6 @@ export const useFilteredTasks = (tasks: Array<TCard>): Array<TCard> => {
       !_.isEqual(myPreviousState, jsonData) &&
       tasks.length > 0
     ) {
-      console.log(1);
-
       setData(tasks.filter((item) => item.type === 'TASKS'));
     }
   }, [tasks]);
