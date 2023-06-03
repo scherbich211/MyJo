@@ -1,0 +1,43 @@
+{
+  "getCards": {
+    "success": true,
+    "result": [
+      {
+        "card_id": 1,
+        "reviewer_id": 2,
+        "name": "Помыть посуду",
+        "reward": 1000,
+        "photo_required": true,
+        "video_required": false,
+        "schedule": [true, false, true, true, false, false, false],
+        "period_start": "2023-04-17 10:00:00",
+        "period_stop": null,
+        "type": "ALL"
+      },
+      {
+        "card_id": 2,
+        "reviewer_id": 2,
+        "name": "Помыть посуду",
+        "reward": 1000,
+        "photo_required": true,
+        "video_required": false,
+        "schedule": [true, false, true, true, false, false, false],
+        "period_start": "2023-04-17 10:00:00",
+        "period_stop": null,
+        "type": "TASKS"
+      },
+      {
+        "card_id": 3,
+        "reviewer_id": 2,
+        "name": "Помыть FLOR",
+        "reward": 1000,
+        "photo_required": true,
+        "video_required": false,
+        "schedule": [true, false, true, true, false, false, false],
+        "period_start": "2023-04-17 10:00:00",
+        "period_stop": null,
+        "type": "TASKS"
+      }
+    ]
+  }
+}
