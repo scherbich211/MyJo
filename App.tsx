@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { FlatList, StyleSheet, Text } from 'react-native';
 import { useAllQuery } from './src/api/user';
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { useFilteredTasks, usePrevious } from './src/hooks';
+import React, { useCallback, useEffect } from 'react';
+import { useFilteredTasks } from './src/hooks';
 import { SafeAreaView } from 'react-native';
 import Card from './src/components';
 import { Alert } from 'react-native';
@@ -36,12 +36,19 @@ export default function App() {
     return Alert.alert(`${item.name}`, `${item.description}`);
   }, []);
 
+  const renderItem = useCallback(
+    ({ item }: { item: TCard }) => (
+      <Card item={item} onCardsPress={onCardsPress} />
+    ),
+    [filteredTasks]
+  );
+
   return (
     <SafeAreaView style={styles.container}>
       <Text>Cards</Text>
       <FlatList
         data={filteredTasks}
-        renderItem={({item})=> <Card item={item} onCardsPress={onCardsPress} />}
+        renderItem={renderItem}
         keyExtractor={(item) => item.card_id.toString()}
       />
       <StatusBar style="auto" />
