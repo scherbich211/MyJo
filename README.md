@@ -1,7 +1,5 @@
 # MyJo Test app
 
-Webpack version: 5+
-
 ## How to run project
 
 1. Open project in VSCode (for example)
